@@ -58,7 +58,7 @@ hr {
   overflow: visible;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h6 {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
   font-family: "Libre Bodoni", serif;
@@ -89,6 +89,9 @@ ul ul,
 ol ul,
 ul ol {
   margin-bottom: 0;
+  color: whitesmoke;
+  text-align: left;
+
 }
 
 a {
@@ -249,15 +252,16 @@ h3, .h3 {
 }
 
 h4, .h4 {
-  font-size: 1.75rem; 
+  font-size: 1.5rem; 
 }
 
 h5, .h5 {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  color: var(--yellow);
 }
 
 h6, .h6 {
-  font-size: 1rem;
+  font-size: 0.5rem;
 }
 
 hr {
@@ -352,8 +356,8 @@ small,
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
 }
 
 .col {
@@ -4660,6 +4664,9 @@ p.mb-3 { font-size: calc(20px + (14 - 13) * ((100vw - 300px) / (1300 - 300)));}
 .mx-auto {
   margin-left: auto !important;
 }
+section#portfolio{
+  overflow-y: scroll;
+}
 .portfolio .filters {
   border-bottom: 2px solid var(--yellow);
   border-radius: 10px;
@@ -4670,7 +4677,7 @@ p.mb-3 { font-size: calc(20px + (14 - 13) * ((100vw - 300px) / (1300 - 300)));}
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  
+ 
   -webkit-box-pack: justify;
   -webkit-justify-content: space-around;
       -ms-flex-pack: justify;
@@ -5088,7 +5095,6 @@ pre .code {
 
 .section {
   padding: 80px 0;
-  overflow: scroll;
 }
 
 .section.bg-custom-gray {
@@ -5097,6 +5103,8 @@ pre .code {
 
 .about-section {
   border-bottom: 1px solid #dee2e6;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .about-section .about-card {
@@ -5222,7 +5230,9 @@ pre .code {
 }
 
 #blog-back-button, #tableau-back-button {
-    position: inherit;
+    position: relative;
+    left: -42%;
+    margin-top: 20px;
     margin-bottom: 20px;
     padding: 10px 20px;
     background-color: var(--yellow);
@@ -5237,9 +5247,11 @@ pre .code {
 }
 
 #blog-content, #tableau-content {
-    font-size: 18px;
-    color: var(--dark-green);
+    font-size: 1rem;
+    color: whitesmoke;
     line-height: 1.6;
+    text-align: left;
+    padding: 1.2rem;
 }
 
 
@@ -5262,6 +5274,14 @@ pre .code {
 .more-btn:hover {
   color: var(--yellow) !important;
 }
+
+
+
+
+
+
+
+
 
 
 
