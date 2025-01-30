@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
 =========================================================
-* JohnDoe Landing page
+* Origional JohnDoe Landing page
 =========================================================
 
 * Copyright: 2019 DevCRUD (https://devcrud.com)
@@ -98,6 +98,7 @@ a {
   color: #D99938;
   text-decoration: none;
   background-color: transparent;
+  white-space: nowrap; 
 }
 
 a:hover {
@@ -106,13 +107,13 @@ a:hover {
 }
 
 a:not([href]):not([tabindex]) {
-  color: inherit;
-  text-decoration: none;
+  color: var(--yellow);
+  text-decoration: underline;
 }
 
 a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 a:not([href]):not([tabindex]):focus {
@@ -301,6 +302,11 @@ small,
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  
+}
+
+.portfolio, #resume {
+  margin-top: 4rem;
 }
 
 @media (min-width: 576px) {
@@ -323,8 +329,9 @@ small,
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1600px;
   }
+  
 }
 
 .container-fluid {
@@ -356,8 +363,9 @@ small,
 .col-xl-auto {
   position: relative;
   width: 100%;
-  padding-right: 2.5rem;
-  padding-left: 2.5rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
 }
 
 .col {
@@ -1459,7 +1467,7 @@ small,
   font-weight: 400;
   line-height: 1.5;
   color: #495057;
-  background-color: #fff;
+  background-color: whitesmoke;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
@@ -2993,7 +3001,8 @@ button.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: whitesmoke !important;
+ 
 }
 
 a.bg-dark:hover, a.bg-dark:focus,
@@ -4223,6 +4232,10 @@ button.bg-dark:focus {
   padding-left: 1rem !important;
 }
 
+.py-5 {
+  padding-top: 2rem !important;
+  padding-left: 2rem !important;
+}
 .mt-2,
 .my-2 {
   margin-top: 0.5rem !important;
@@ -4398,7 +4411,9 @@ a.text-danger:hover, a.text-danger:focus {
   color: #f51330 !important;
 }
 
-
+.text-light{
+  color: var(--dark-green) !important;
+}
 a.text-light:hover, a.text-light:focus {
   color: #cbd3da !important;
 }
@@ -4677,7 +4692,7 @@ section#portfolio{
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
- 
+  justify-content: space-around;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-around;
       -ms-flex-pack: justify;
@@ -4693,9 +4708,9 @@ section#portfolio{
   font-size: 16px;
   font-weight: 500;
   opacity: .7;
-  padding: 4px 10px;
+  padding: 10px 10px;
   border: 2px solid var(--yellow);
-  border-radius: 10%;
+  border-radius: 0.4rem;
   transition: 0.3s;
   -webkit-transition: 0.3s;
   width: 100%;
@@ -4989,7 +5004,7 @@ pre .code {
 }
 
 .footer {
-  background: #17263C;
+  background: whitesmoke;
 }
 
 .header {
@@ -5047,8 +5062,7 @@ pre .code {
 
 @media (max-width: 767.98px) {
   .header {
-    height: 500px;
-    min-height: 500px;
+    background-position-x: 80%;
   }
   .header .social-icons {
     margin: auto;
@@ -5056,9 +5070,7 @@ pre .code {
   .header .header-content {
     padding: 20px;
   }
-  /*.header .header-content .header-mono {
-    letter-spacing: 2px;
-  }*/
+
 }
 
 .header-title {
@@ -5094,7 +5106,7 @@ pre .code {
 }
 
 .section {
-  padding: 80px 0;
+  padding: 20px 0;
 }
 
 .section.bg-custom-gray {
@@ -5136,7 +5148,7 @@ pre .code {
 
 @media (max-width: 991.98px) {
   .contact {
-    padding: 300px 0 0;
+    padding: 4rem 0 0;
   }
   .contact .contact-form-card {
     border-bottom: 1px solid #dee2e6;
@@ -5151,7 +5163,6 @@ pre .code {
 .contact .contact-info-card {
   padding: 35px;
   background: #343a40;
-  min-height: 500px;
   border-radius: 10px;
 }
 
@@ -5173,10 +5184,6 @@ pre .code {
   margin-top: 10px;
 }
 
-.personal-info{
-  height: 50%;
-}
-
 /*------------Porfolio---------------
 */
 .blog-container {
@@ -5191,7 +5198,7 @@ pre .code {
 
 #image-view, #tableau-image-view {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -5218,6 +5225,7 @@ pre .code {
     font-size: 16px;
     font-weight: bold;
     color: whitesmoke;
+    width: 250px;
 }
 
 #blog-view, #tableau-view {
@@ -5252,6 +5260,7 @@ pre .code {
     line-height: 1.6;
     text-align: left;
     padding: 1.2rem;
+    height: max-content;
 }
 
 
@@ -5275,17 +5284,65 @@ pre .code {
   color: var(--yellow) !important;
 }
 
+ol > li::marker { content: counters(list-item, '.') '. '; }
 
+/* Ensure the table container is scrollable on small screens */
+.table-responsive {
+  overflow-x: auto; /* Add horizontal scrolling if needed */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  width: 100%; /* Ensure the container adapts to the screen size */
+  margin-bottom: 15px; /* Optional: Add some spacing below the table */
+}
 
+/* Optional: Add styling for the table itself */
+.table {
+  width: 100%; /* Let the table take full width of the container */
+  border-collapse: collapse; /* Ensure borders don't overlap */
+  border: 1px solid;
+}
 
+.table th,
+.table td {
+  padding: 8px; /* Add some padding for better readability */
+  text-align: left; /* Align text to the left */
+  white-space: nowrap; /* Prevent wrapping text inside cells */
+  border: 1px solid;
+}
 
+@media (max-width: 768px) {
+  /* On smaller screens, adjust padding for readability */
+  .table th,
+  .table td {
+    padding: 6px;
+    font-size: 14px; /* Optional: Reduce font size */
+  }
 
+  .about-section .about-card {
+    border-right: none;
+  }
 
+  .header{
+    background-size: cover;
+  }
 
+  .header .header-content{
+    position: inherit;
+  }
 
+  
+}
 
+.tableauPlaceholder{
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
 
-
+.tableauViz{
+  width: 100%;
+  height: 1200px;
+  margin: 0 auto;
+}
 
 
 
